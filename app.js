@@ -59,4 +59,16 @@
       alert('Please enter a search term');
     }
 }
-    // Optional: Automatically focus on the search input when the page loads
+function flyToRandomLocation() {
+    // Define the range for latitude and longitude
+    var latRange = [-85, 85]; // Avoiding poles for more interesting locations
+    var lngRange = [-180, 180];
+    
+    // Generate a random latitude and longitude
+    var randomLat = Math.random() * (latRange[1] - latRange[0]) + latRange[0];
+    var randomLng = Math.random() * (lngRange[1] - lngRange[0]) + lngRange[0];
+    
+    // Use the flyTo method to move the map to the random location
+    map.flyTo([randomLat, randomLng], 13); // You can adjust the zoom level as needed
+}
+
