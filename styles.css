@@ -1,0 +1,30 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling on the full page to only have it in the content area */
+}
+#navbar {
+  height: 60px; /* Set the height of the navbar */
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+#map {
+  height: calc(100vh - 60px); /* Adjust the height of the map to account for the navbar */
+  width: 60%; /* Set the width of the map to 40% of the view width */
+  position: fixed;
+  top: 64px; /* Position the map below the navbar */
+  left: 0;
+  z-index: 500; /* Lower z-index than navbar but above the base layer */
+}
+.content {
+  position: absolute;
+  top: 60px; /* Position the content below the navbar */
+  left: 40%; /* Set the left position to the width of the map */
+  width: 60%; /* Set the width of the content area to fill the remaining space */
+  height: calc(100vh - 60px); /* Full height minus navbar height */
+  overflow-y: auto; /* Enable scrolling for the content area */
+  padding: 1rem;
+  z-index: 200; /* Ensure the content is above the base layer */
+}
+#search {
+    color: black;
+  }

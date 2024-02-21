@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Sightings Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar with continent links -->
+<nav class="bg-gray-800 text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-4">
+        <!-- logo -->
+        <div>
+          <a href="#" class="flex items-center py-5 px-2">
+            <span class="font-bold">Wildlife Sightings</span>
+          </a>
+        </div>
+        <!-- primary nav -->
+          <div class="flex items-center space-x-4">
+            <input type="text" id="search" placeholder="Search for a place..." class="p-2 rounded" />
+            <button onclick="geocodeSearch()" class="bg-blue-500 hover:bg-blue-700 text-white p-2 rounded">Search</button>
+      
+        </div>
+      </div>
+      
+      <!-- secondary nav -->
+      <div class="hidden md:flex items-center space-x-1">
+      </div>
+      <!-- Continent links -->
+      <div class="flex items-center space-x-4">
+        <a href="#" onclick="flyToContinent('Africa')" class="nav-link py-2 px-3">Africa</a>
+        <a href="#" onclick="flyToContinent('Asia')" class="nav-link py-2 px-3">Asia</a>
+        <a href="#" onclick="flyToContinent('Europe')" class="nav-link py-2 px-3">Europe</a>
+        <a href="#" onclick="flyToContinent('North America')" class="nav-link py-2 px-3">North America</a>
+        <a href="#" onclick="flyToContinent('South America')" class="nav-link py-2 px-3">South America</a>
+        <a href="#" onclick="flyToContinent('Australia')" class="nav-link py-2 px-3">Australia</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="map"></div>
+<!-- Include the Leaflet Geocoder CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<!-- Include Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- Include the Leaflet Geocoder JavaScript -->
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+<!-- Initialize the map and handle user location -->
+
+
+<script src="app.js"></script>
+</body>
+</html>
