@@ -1,4 +1,5 @@
 Map-Based JavaScript Application 🌍✈️
+
 Explore the globe with our interactive map application, utilizing the power of the Leaflet library and Mapbox API. This application enhances user experience by standardizing English as the display language for maps, making navigation and exploration universally accessible.
 
 Key Features
